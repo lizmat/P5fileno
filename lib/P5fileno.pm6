@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5fileno:ver<0.0.1>:auth<cpan:ELIZABETH>;
+unit module P5fileno:ver<0.0.2>:auth<cpan:ELIZABETH>;
 
 proto sub fileno(|) is export {*}
 multi sub fileno(IO::Handle:D $handle --> Int:D) {
@@ -31,8 +31,35 @@ P5fileno - Implement Perl 5's fileno() built-in
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<fileno> of Perl 5 as closely
-as possible.
+This module tries to mimic the behaviour of the C<fileno> function of Perl 5 as
+closely as possible.
+
+=head1 ORIGINAL PERL 5 DOCUMENTATION
+
+    fileno FILEHANDLE
+            Returns the file descriptor for a filehandle, or undefined if the
+            filehandle is not open. If there is no real file descriptor at the
+            OS level, as can happen with filehandles connected to memory
+            objects via "open" with a reference for the third argument, -1 is
+            returned.
+
+            This is mainly useful for constructing bitmaps for "select" and
+            low-level POSIX tty-handling operations. If FILEHANDLE is an
+            expression, the value is taken as an indirect filehandle,
+            generally its name.
+
+            You can use this to find out whether two handles refer to the same
+            underlying descriptor:
+
+                if (fileno(THIS) != -1 && fileno(THIS) == fileno(THAT)) {
+                    print "THIS and THAT are dups\n";
+                } elsif (fileno(THIS) != -1 && fileno(THAT) != -1) {
+                    print "THIS and THAT have different " .
+                        "underlying file descriptors\n";
+                } else {
+                    print "At least one of THIS and THAT does " .
+                        "not have a real file descriptor\n";
+                }
 
 =head1 PORTING CAVEATS
 
