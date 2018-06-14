@@ -48,6 +48,13 @@ ORIGINAL PERL 5 DOCUMENTATION
                         "not have a real file descriptor\n";
                 }
 
+IDIOMATIC PERL 6 WAY
+====================
+
+The file descriptor of a file handle is exposed with the `native-descriptor` method on `IO::Handle`:
+
+    say $*OUT.native-descriptor;   # 1
+
 PORTING CAVEATS
 ===============
 

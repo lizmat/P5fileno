@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5fileno:ver<0.0.2>:auth<cpan:ELIZABETH>;
+unit module P5fileno:ver<0.0.3>:auth<cpan:ELIZABETH>;
 
 proto sub fileno(|) is export {*}
 multi sub fileno(IO::Handle:D $handle --> Int:D) {
@@ -60,6 +60,13 @@ closely as possible.
                     print "At least one of THIS and THAT does " .
                         "not have a real file descriptor\n";
                 }
+
+=head1 IDIOMATIC PERL 6 WAY
+
+The file descriptor of a file handle is exposed with the C<native-descriptor>
+method on C<IO::Handle>:
+
+    say $*OUT.native-descriptor;   # 1
 
 =head1 PORTING CAVEATS
 
