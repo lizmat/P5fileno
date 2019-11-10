@@ -2,6 +2,9 @@ Revision history for P5fileno
 
 {{$NEXT}}
 
+0.0.4  2019-11-10T13:56:21+01:00
+    - changed Perl 6 to Raku, and Perl 5 to Perl
+
 0.0.3  2018-06-14T19:56:58+02:00
     - Added IDIOMATIC PERL 6 WAY section to documentation
 

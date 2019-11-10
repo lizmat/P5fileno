@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5fileno:ver<0.0.3>:auth<cpan:ELIZABETH>;
+unit module P5fileno:ver<0.0.4>:auth<cpan:ELIZABETH>;
 
 proto sub fileno(|) is export {*}
 multi sub fileno(IO::Handle:D $handle --> Int:D) {
@@ -18,7 +18,7 @@ multi sub fileno(IO::Handle:D $handle --> Int:D) {
 
 =head1 NAME
 
-P5fileno - Implement Perl 5's fileno() built-in
+P5fileno - Implement Perl's fileno() built-in
 
 =head1 SYNOPSIS
 
@@ -31,7 +31,7 @@ P5fileno - Implement Perl 5's fileno() built-in
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<fileno> function of Perl 5 as
+This module tries to mimic the behaviour of the C<fileno> function of Perl as
 closely as possible.
 
 =head1 ORIGINAL PERL 5 DOCUMENTATION
@@ -71,7 +71,7 @@ method on C<IO::Handle>:
 =head1 PORTING CAVEATS
 
 When calling with an unopened C<IO::Handle>, this version will return C<Nil>.
-That's the closest thing there is to C<undef> in Perl 6.
+That's the closest thing there is to C<undef> in Raku.
 
 =head1 AUTHOR
 
@@ -82,9 +82,9 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

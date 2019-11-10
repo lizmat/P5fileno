@@ -1,9 +1,7 @@
-[![Build Status](https://travis-ci.org/lizmat/P5fileno.svg?branch=master)](https://travis-ci.org/lizmat/P5fileno)
-
 NAME
 ====
 
-P5fileno - Implement Perl 5's fileno() built-in
+P5fileno - Implement Perl's fileno() built-in
 
 SYNOPSIS
 ========
@@ -18,7 +16,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-This module tries to mimic the behaviour of the `fileno` function of Perl 5 as closely as possible.
+This module tries to mimic the behaviour of the `fileno` function of Perl as closely as possible.
 
 ORIGINAL PERL 5 DOCUMENTATION
 =============================
@@ -58,7 +56,7 @@ The file descriptor of a file handle is exposed with the `native-descriptor` met
 PORTING CAVEATS
 ===============
 
-When calling with an unopened `IO::Handle`, this version will return `Nil`. That's the closest thing there is to `undef` in Perl 6.
+When calling with an unopened `IO::Handle`, this version will return `Nil`. That's the closest thing there is to `undef` in Raku.
 
 AUTHOR
 ======
@@ -70,9 +68,9 @@ Source can be located at: https://github.com/lizmat/P5fileno . Comments and Pull
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
