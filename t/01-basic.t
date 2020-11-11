@@ -1,4 +1,4 @@
-use v6.c;
+use v6.*;
 use Test;
 use P5fileno;
 
@@ -10,4 +10,4 @@ is fileno($*ERR), 2, 'is fileno STDIN 2';
 
 ok fileno(open($?FILE)) > 2, 'is fileno of an opened $?FILE a valid value?';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

@@ -1,7 +1,7 @@
 NAME
 ====
 
-P5fileno - Implement Perl's fileno() built-in
+Raku port of Perl's fileno() built-in
 
 SYNOPSIS
 ========
@@ -16,7 +16,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-This module tries to mimic the behaviour of the `fileno` function of Perl as closely as possible.
+This module tries to mimic the behaviour of Perl's `fileno` built-in as closely as possible in the Raku Programming Language.
 
 ORIGINAL PERL 5 DOCUMENTATION
 =============================
@@ -68,7 +68,7 @@ Source can be located at: https://github.com/lizmat/P5fileno . Comments and Pull
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018-2019 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
